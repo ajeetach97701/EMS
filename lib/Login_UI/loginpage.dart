@@ -1,6 +1,6 @@
 import 'package:event_calender_app/first_page.dart';
 import 'package:flutter/material.dart';
-import 'package:event_calender_app/home_page.dart';
+import 'package:event_calender_app/landing_page_afterlogin.dart';
 import 'package:event_calender_app/Login_UI/forget_password.dart';
 import 'package:event_calender_app/reusbale_widgets_constants.dart';
 

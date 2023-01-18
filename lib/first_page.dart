@@ -1,4 +1,3 @@
-
 import 'package:event_calender_app/Login_UI/new_accounts.dart';
 import 'package:event_calender_app/Login_UI/loginpage.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +76,7 @@ class MyApp extends StatelessWidget {
                               style: TextStyle(
                                   fontFamily: 'SourceSansPro',
                                   fontSize: 20.0,
-                                  color: Colors.white),
+                                  color: Colors.white,),
                             ),
                           ),
                         ),
@@ -88,7 +87,8 @@ class MyApp extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 200),
                     child: Card(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50.0)),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                       color: Colors.deepPurple,
                       //margin:
                       margin: EdgeInsets.symmetric(
