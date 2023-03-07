@@ -1,7 +1,9 @@
 import 'package:event_calender_app/reusbale_widgets_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:event_calender_app/first_page.dart';
+
+// import 'package:event_calender_app/first_page.dart';
 import 'package:event_calender_app/newpage.dart';
+import 'package:event_calender_app/details.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -53,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -84,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -99,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -108,12 +110,12 @@ class _HomePageState extends State<HomePage> {
                   CategoriesButton(
                     color: Colors.white,
                     image: Image.asset('image/firstpage.jpg'),
-                    label: 'Bachelors Party',
+                    label: 'Others',
                     onPress: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyApp(),
+                          builder: (context) => NewPage(),
                         ),
                       );
                     },
@@ -126,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NewPage(),
+                      builder: (context) => DetailsPage(),
                     ),
                   );
                 },
@@ -190,19 +192,22 @@ class Most extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
+        child: TextButton(
+          onPressed: () {},
+          child: Container(
             decoration: BoxDecoration(
-                color: Colors.deepPurple,
+                color: Colors.blue[60],
                 borderRadius: BorderRadius.circular(20)),
             child: Center(
-              child: Text(
-                'Hi',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+                child: Text(
+              'Hi',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
             )),
+          ),
+        ),
       ),
     );
   }

@@ -108,8 +108,9 @@ class CategoriesButton extends StatelessWidget {
             style: TextButton.styleFrom(
               backgroundColor: Colors.white,
               elevation: 5,
+
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
+                borderRadius: BorderRadius.circular(25.0),
               ),
             ),
             child: Column(
@@ -122,7 +123,7 @@ class CategoriesButton extends StatelessWidget {
                   label,
                   style: TextStyle(
                     fontFamily: 'SourceSansPro',
-                    fontSize: 15.0,
+                    fontSize: 12.0,
                     color: Colors.black,
                   ),
                 ),

@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   'click here to back to login page',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.red),
                 ),
               )
             ],

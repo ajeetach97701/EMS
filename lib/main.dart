@@ -7,9 +7,16 @@ import 'package:event_calender_app/first_page.dart';
 void main() {
   runApp(
     MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.white),
+          color: Colors.deepPurpleAccent, //<-- SEE HERE
+        ),
+      ),
       home: MyApp(),
     //  home: HomePage(),
-      //home: NewPage(),
+      //home: NewPage(),q
     ),
   );
 }
