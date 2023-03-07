@@ -64,7 +64,7 @@ class NewAccount extends StatelessWidget {
                     color: kThemeColor,
                   ),
                   child: ButtonText(
-                    label: 'Create Account',
+                    label: 'Account new one',
                     onPress: () {
                       // Navigator.push(
                       //   context,
