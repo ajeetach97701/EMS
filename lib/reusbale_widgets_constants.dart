@@ -10,6 +10,7 @@ const kNFieldSizedBox = SizedBox(
 const kWFieldSizedBox = SizedBox(
   width: 15,
 );
+
 const kThemeColor = Colors.deepPurple;
 const kButtonTextColor = Colors.white;
 
@@ -108,7 +109,6 @@ class CategoriesButton extends StatelessWidget {
             style: TextButton.styleFrom(
               backgroundColor: Colors.white,
               elevation: 5,
-
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0),
               ),
@@ -129,6 +129,30 @@ class CategoriesButton extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class GuestField extends StatelessWidget {
+  const GuestField({super.key, required this.hText, this.prefixIcon});
+
+  final String? hText;
+  final Widget? prefixIcon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: hText,
+            prefixIcon: prefixIcon,
+            border: OutlineInputBorder(),
           ),
         ),
       ),

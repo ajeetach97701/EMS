@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NewPage extends StatefulWidget {
-  const NewPage({Key? key}) : super(key: key);
+class OtherEvents extends StatefulWidget {
+  const OtherEvents({Key? key}) : super(key: key);
 
   @override
-  State<NewPage> createState() => _NewPageState();
+  State<OtherEvents> createState() => _OtherEventsState();
 }
 
-class _NewPageState extends State<NewPage> {
+class _OtherEventsState extends State<OtherEvents> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,5 +101,6 @@ class DemoWidget extends StatelessWidget {
         ),
       ],
     );
+
   }
 }

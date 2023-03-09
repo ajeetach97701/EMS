@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
                 fontSize: 33,
               ),
             ),
-            kFieldSizedBox,
+            // kFieldSizedBox,
             Text(
               'login to continue to EMS',
               style: TextStyle(fontSize: 20),
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
             kNFieldSizedBox,
             EntryField(
               hText: 'Email',
-              prefixIcon: Icon(Icons.mail),
+              prefixIcon: Icon(Icons.person),
             ),
             SizedBox(
               height: 20,
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
                 color: kThemeColor,
               ),
               child: ButtonText(
-                label: 'Log In',
+               label: 'Log In',
                 onPress: () {
                   Navigator.push(
                     context,
