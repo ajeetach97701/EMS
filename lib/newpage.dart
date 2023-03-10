@@ -12,9 +12,7 @@ class _OtherEventsState extends State<OtherEvents> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'All Events'
-        ),
+        title: Text('All Events'),
       ),
       body: SafeArea(
         child: Padding(
@@ -41,7 +39,8 @@ class _OtherEventsState extends State<OtherEvents> {
 
 class DemoWidget extends StatelessWidget {
   // const DemoWidget({required this.text});
-  const DemoWidget({super.key,
+  const DemoWidget({
+    super.key,
     required this.text,
   });
 
@@ -101,6 +100,5 @@ class DemoWidget extends StatelessWidget {
         ),
       ],
     );
-
   }
 }

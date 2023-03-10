@@ -1,10 +1,9 @@
 import 'package:event_calender_app/reusbale_widgets_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:event_calender_app/details.dart';
 
 // import 'package:event_calender_app/first_page.dart';
 import 'package:event_calender_app/newpage.dart';
-// import 'package:event_calender_app/details.dart';
+import 'package:event_calender_app/details.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OtherEvents(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -69,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OtherEvents(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -87,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OtherEvents(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },
@@ -102,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OtherEvents(),
+                          builder: (context) => DetailsPage(),
                         ),
                       );
                     },

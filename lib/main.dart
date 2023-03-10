@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'newpage.dart';
 import 'package:event_calender_app/first_page.dart';
 import 'package:event_calender_app/landing_page_afterlogin.dart';
+import 'package:firebase_core/firebase_core.dart';
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
-void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(
@@ -17,9 +20,8 @@ void main() {
         ),
       ),
       // home: (),
-     // home: MyApp(),
-      home: DetailsPage(),
-
+     home: MyApp(),
+     //  home: DetailsPage(),
     ),
   );
 }

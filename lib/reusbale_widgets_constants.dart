@@ -13,6 +13,7 @@ const kWFieldSizedBox = SizedBox(
 
 const kThemeColor = Colors.deepPurple;
 const kButtonTextColor = Colors.white;
+const kNotSelected = Colors.white;
 
 class EntryField extends StatelessWidget {
   const EntryField({super.key, required this.hText, this.prefixIcon});
@@ -102,39 +103,66 @@ class CategoriesButton extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
-          child: TextButton(
-            onPressed: onPress,
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.white,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
+        child: TextButton(
+          onPressed: onPress,
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.white,
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: image,
               ),
-            ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: image,
+              Text(
+                label,
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 12.0,
+                  color: Colors.black,
                 ),
-                Text(
-                  label,
-                  style: TextStyle(
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 12.0,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+
+
+class ReusableWidget extends StatelessWidget {
+  const ReusableWidget(
+      {super.key, required this.colour, this.cardChild, this.onPress});
+
+  final Color? colour;
+  final Widget? cardChild;
+  final Function()? onPress;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        margin: EdgeInsets.all(4),
+        decoration: BoxDecoration(
+          color: colour,
+          border: Border.all(
+            color: Colors.black,
+          ),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: cardChild,
+      ),
+    );
+  }
+}
+
+
 
 class GuestField extends StatelessWidget {
   const GuestField({super.key, required this.hText, this.prefixIcon});
@@ -145,9 +173,9 @@ class GuestField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      padding: EdgeInsets.symmetric(horizontal: 1.0),
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(1.0),
         child: TextField(
           decoration: InputDecoration(
             hintText: hText,
